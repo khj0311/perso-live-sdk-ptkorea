@@ -1,34 +1,34 @@
 import { persoLiveApiServerUrl, persoLiveApiKey } from '$lib/constant';
 
 // Enter your configuration.
-export const config = {
-	llm: 'azure-gpt-4o',
-	tts: 'hns_v2',
-	modelStyle: 'chaehee_livechat-front-white_blouse-greeting_loop',
-	prompt: 'plp-01554e50acfa497014b6eebe1cdfa5c4',
-	document: null,
-	backgroundImage: null,
-	introMessage: '',
-	padding_left: 0.0, // -1.0 ~ 1.0
-	padding_top: 0.0, // 0.0 ~ 1.0
-	padding_height: 1.0 // 0.0 ~ 5.0
-};
+// export const config = {
+// 	llm: 'azure-gpt-4o',
+// 	tts: 'hns_v2',
+// 	modelStyle: 'chaehee_livechat-front-white_blouse-greeting_loop',
+// 	prompt: 'plp-01554e50acfa497014b6eebe1cdfa5c4',
+// 	document: null,
+// 	backgroundImage: null,
+// 	introMessage: '',
+// 	padding_left: 0.0, // -1.0 ~ 1.0
+// 	padding_top: 0.0, // 0.0 ~ 1.0
+// 	padding_height: 1.0 // 0.0 ~ 5.0
+// };
 
 // ex
-/* const allConfig = await getAllConfig();
+const allConfig = await getAllConfig();
 export const config = {
 	llm: allConfig.llms[0].name,
 	tts: allConfig.ttss[0].name,
-	modelStyle: allConfig.modelStyles[0].name,
-	prompt: allConfig.prompts[0].prompt_id,
+	modelStyle: allConfig.modelStyles.length > 0 ? allConfig.modelStyles[0].name : null,
+	prompt: allConfig.prompts.length > 0 ? allConfig.prompts[0].prompt_id : '',
 	document: allConfig.documents.length > 0 ? allConfig.documents[0].document_id : null,
 	backgroundImage:
 		allConfig.backgroundImages.length > 0 ? allConfig.backgroundImages[0].backgroundimage_id : null,
-	introMessage: allConfig.prompts[0].intro_message,
+	introMessage: allConfig.prompts.length > 0 ? allConfig.prompts[0].intro_message : '',
 	padding_left: 0.0,
 	padding_top: 0.15,
 	padding_height: 1.0
-}; */
+};
 
 async function getAllConfig() {
 	let llms, ttss, modelStyles, backgroundImages, prompts, documents;
