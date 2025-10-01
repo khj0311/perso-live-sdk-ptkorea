@@ -5,7 +5,7 @@ import { persoLiveApiServerUrl, persoLiveApiKey } from '$lib/constant';
 // 	llm: 'azure-gpt-4o',
 // 	tts: 'hns_v2',
 // 	modelStyle: 'chaehee_livechat-front-white_blouse-greeting_loop',
-// 	prompt: 'plp-01554e50acfa497014b6eebe1cdfa5c4',
+// 	prompt: 'plp-3bd08fc9642d3f27333fdca5ae9745b6',
 // 	document: null,
 // 	backgroundImage: null,
 // 	introMessage: '',
